@@ -1,0 +1,50 @@
+lass           |  IoU  |  Acc  |
++---------------------------+-------+-------+
+|        Mammal Head        | 73.02 | 85.31 |
+|        Mammal Body        | 60.73 |  79.6 |
+|        Mammal Foot        | 50.46 |  66.3 |
+|        Mammal Tail        | 22.55 | 28.93 |
+|        Monkey Head        | 72.53 | 85.08 |
+|        Monkey Body        | 37.71 | 54.62 |
+|        Monkey Hand        | 34.32 | 50.13 |
+|        Monkey Foot        | 23.49 | 44.72 |
+|        Monkey Tail        | 19.87 | 22.27 |
+|         Fish Head         | 21.35 |  23.3 |
+|         Fish Body         | 32.75 | 40.06 |
+|          Fish Fin         | 28.78 | 34.31 |
+|         Fish Tail         |  9.76 | 18.24 |
+|         Bird Head         | 62.21 | 83.09 |
+|         Bird Body         | 63.77 | 80.13 |
+|         Bird Wing         | 15.42 | 26.74 |
+|         Bird Foot         | 61.26 | 71.03 |
+|         Bird Tail         | 45.44 | 53.89 |
+|         Snake Head        | 60.26 | 76.84 |
+|         Snake Body        |  85.7 | 95.02 |
+|        Reptile Head       | 52.22 | 79.07 |
+|        Reptile Body       | 69.15 | 82.83 |
+|        Reptile Foot       | 52.37 | 66.65 |
+|        Reptile Tail       | 23.77 | 35.24 |
+|     Motor Vehicle Body    | 88.11 | 97.65 |
+|     Motor Vehicle Tier    | 80.52 |  88.7 |
+| Motor Vehicle Side Mirror | 12.17 | 13.17 |
+|   Non-Motor Vehicle Body  | 69.43 | 83.32 |
+|   Non-Motor Vehicle Head  | 39.19 | 50.59 |
+|   Non-Motor Vehicle Seat  | 46.29 |  55.9 |
+|   Non-Motor Vehicle Tier  | 86.31 | 95.58 |
+|         Boat Body         | 42.52 | 80.42 |
+|         Boat Sail         |  89.7 | 95.58 |
+|         Plane Head        |  8.45 |  8.67 |
+|         Plane Body        | 12.84 | 13.86 |
+|        Plane Engine       |  9.39 | 10.88 |
+|         Plane Wing        | 14.26 | 15.51 |
+|         Plane Tail        | 18.33 | 20.46 |
+|        Bottle Mouth       | 22.72 | 45.53 |
+|        Bottle Body        | 68.49 | 84.99 |
++---------------------------+-------+-------+
+Summary:
+
++-------+-------+-------+
+|  aAcc |  mIoU |  mAcc |
++-------+-------+-------+
+| 76.26 | 44.69 | 56.11 |
++-------+-------+-------+
