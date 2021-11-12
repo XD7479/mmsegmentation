@@ -89,7 +89,7 @@ def single_gpu_test(model,
     for batch_indices, data in zip(loader_indices, data_loader):
         with torch.no_grad():
             result = model(return_loss=False, **data)
-
+            
         if efficient_test:
             result = [np2tmp(_, tmpdir='.efficient_test') for _ in result]
 
@@ -100,7 +100,7 @@ def single_gpu_test(model,
             # TODO: adapt samples_per_gpu > 1.
             # only samples_per_gpu=1 valid now
             result = dataset.pre_eval(result, indices=batch_indices)
-
+        
         results.extend(result)
 
         if show or out_dir:
