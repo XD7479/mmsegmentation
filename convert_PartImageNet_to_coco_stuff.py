@@ -1,5 +1,4 @@
-import numpy as np
-from pycocotools import mask
+mport numpy as np
 from PIL import Image, ImagePalette # For indexed images
 import matplotlib # For Matlab's color maps
 from pycocotools.coco import COCO
@@ -147,7 +146,7 @@ if __name__ == "__main__":
     DATASET_LEN = {'train': 16540, 'val': 2957, 'test': 4598}
     root_path = '/mnt/data0/xiaoding'
     raw_dataDir = os.path.join(root_path, 'PartImageNet')
-    dataDir = os.path.join(root_path, 'PartImageNet_coco_format_test')
+    dataDir = os.path.join(root_path, 'PartImageNet_coco_format')
 
     # re-organize file structure
     if os.path.exists(dataDir):
@@ -163,7 +162,7 @@ if __name__ == "__main__":
         os.mkdir(os.path.join(dataDir, 'images', dataType))
         dirs = os.listdir(os.path.join(raw_dataDir, dataType))
         for sub_dir in dirs:
-            cmd = 'mv {}/* {}/'.format(os.path.join(raw_dataDir, dataType, sub_dir),
+            cmd = 'cp {}/* {}/'.format(os.path.join(raw_dataDir, dataType, sub_dir),
                                        os.path.join(dataDir, 'images', dataType))
             os.system(cmd)
 
@@ -192,3 +191,4 @@ if __name__ == "__main__":
 
             # # for debug
             # cocoSegmentationToPng(coco, imgId=img_id, pngPath=png_path, if_color_map=True)
+
