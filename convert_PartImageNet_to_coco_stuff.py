@@ -1,4 +1,4 @@
-mport numpy as np
+import numpy as np
 from PIL import Image, ImagePalette # For indexed images
 import matplotlib # For Matlab's color maps
 from pycocotools.coco import COCO
