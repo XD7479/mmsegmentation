@@ -144,7 +144,7 @@ def cocoSegmentationToPng(coco, imgId, pngPath, includeCrowd=False, if_color_map
 
 if __name__ == "__main__":
     DATASET_LEN = {'train': 16540, 'val': 2957, 'test': 4598}
-    root_path = '/mnt/data0/xiaoding'
+    root_path = 'data'
     raw_dataDir = os.path.join(root_path, 'PartImageNet')
     dataDir = os.path.join(root_path, 'PartImageNet_coco_format')
 
