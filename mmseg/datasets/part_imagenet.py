@@ -19,7 +19,7 @@ class PartImageNetDataset(CustomDataset):
                'Motor Vehicle Tier', 'Motor Vehicle Side Mirror', 'Non-Motor Vehicle Body',
                'Non-Motor Vehicle Head', 'Non-Motor Vehicle Seat', 'Non-Motor Vehicle Tier',
                'Boat Body', 'Boat Sail', 'Plane Head', 'Plane Body', 'Plane Engine',
-               'Plane Wing', 'Plane Tail', 'Bottle Mouth', 'Bottle Body')
+               'Plane Wing', 'Plane Tail', 'Bottle Mouth', 'Bottle Body','Background')
 
     PALETTE = [[ 78, 178,  93], [ 34, 178, 138], [ 19, 178, 152], [178, 160,   0], [  0,   0, 172], 
                [  0, 130, 178], [130,   0,   0], [178, 143,   0], [ 89,   0,   0], [  0,  20, 178], 
@@ -28,7 +28,8 @@ class PartImageNetDataset(CustomDataset):
                [  0,   2, 178], [  0, 112, 178], [  0,   0, 110], [178, 110,   0], [108, 178,  64], 
                [  0,   0, 130], [178,  93,   0], [151,   0,   0], [  0,   0, 151], [172,   8,   0], 
                [138, 178,  34], [178,  59,   0], [  0,  93, 178], [123, 178,  49], [ 64, 178, 108], 
-               [ 93, 178,  78], [  0,  38, 178], [  5, 167, 167], [178, 126,   0], [110,   0,   0]]
+               [ 93, 178,  78], [  0,  38, 178], [  5, 167, 167], [178, 126,   0], [110,   0,   0],
+                 [0,   0,   0]]
 
     def __init__(self, **kwargs):
         super(PartImageNetDataset, self).__init__(

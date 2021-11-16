@@ -85,7 +85,7 @@ def single_gpu_test(model,
     # data_fetcher -> collate_fn(dataset[index]) -> data_sample
     # we use batch_sampler to get correct data idx
     loader_indices = data_loader.batch_sampler
-
+        
     for batch_indices, data in zip(loader_indices, data_loader):
         with torch.no_grad():
             result = model(return_loss=False, **data)
@@ -120,7 +120,7 @@ def single_gpu_test(model,
                     out_file = osp.join(out_dir, img_meta['ori_filename'])
                 else:
                     out_file = None
-
+                
                 model.module.show_result(
                     img_show,
                     result,

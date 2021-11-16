@@ -231,7 +231,6 @@ class EncoderDecoder(BaseSegmentor):
         Returns:
             Tensor: The output segmentation map.
         """
-
         assert self.test_cfg.mode in ['slide', 'whole']
         ori_shape = img_meta[0]['ori_shape']
         assert all(_['ori_shape'] == ori_shape for _ in img_meta)

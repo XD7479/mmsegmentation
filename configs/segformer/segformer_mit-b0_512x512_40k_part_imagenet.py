@@ -4,7 +4,7 @@ _base_ = [
 ]
 
 model = dict(
-    pretrained='models/segformer/pretrain/mit_b0.pth', decode_head=dict(num_classes=40))
+    pretrained='models/segformer/pretrain/mit_b0.pth', decode_head=dict(num_classes=41))
 
 # optimizer
 optimizer = dict(
