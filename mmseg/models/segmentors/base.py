@@ -245,13 +245,18 @@ class BaseSegmentor(BaseModule, metaclass=ABCMeta):
         assert 0 < opacity <= 1.0
 
         color_seg = np.zeros((seg.shape[0], seg.shape[1], 3), dtype=np.uint8)
+        _bg_mask = np.zeros((seg.shape[0], seg.shape[1], 3), dtype=float)
         for label, color in enumerate(palette):
+            if label == len(palette) - 1:
+                _bg_mask[seg == label, :] = [1.0 - opacity] * 3
             color_seg[seg == label, :] = color
         # convert to BGR
         color_seg = color_seg[..., ::-1]
-
-        img = img * (1 - opacity) + color_seg * opacity
+        
+        tmp_img = img * (1 - opacity) + color_seg * opacity
+        img = img * _bg_mask + tmp_img
         img = img.astype(np.uint8)
+        
         # if out_file specified, do not show image in window
         if out_file is not None:
             show = False
